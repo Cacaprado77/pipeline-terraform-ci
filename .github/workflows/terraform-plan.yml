@@ -25,5 +25,5 @@ jobs:
     - name: Terraform Validate
       run: terraform validate
 
-    - nema: Terraform Plan
+    - name: Terraform Plan
       run: terraform plan
