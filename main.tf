@@ -9,9 +9,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "dev-terraform-versioning"
+    bucket = "${var.environment}-terraform-versioning"
     key    = "aws-vm-github/terraform.tfstate"
-    region = "us-east-2"
+    region = var.region
   }
 }
 
