@@ -15,7 +15,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+
+    - name: Terraform Init
+      run: terraform init
+
     - name: Terraform Destroy
-    run: |
-      terraform init
-      terraform destroy -auto-approve
+      run: terraform destroy -auto-approve

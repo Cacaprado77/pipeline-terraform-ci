@@ -15,9 +15,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Terraform Plan
-    run: |
-      terraform init
-      terrafor fmt
-      terraform validate
-      terraform plan
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Fmt
+      run: terrafor fmt
+
+    - name: Terraform Validate
+      run: terraform validate
+
+    - nema: Terraform Plan
+      run: terraform plan
