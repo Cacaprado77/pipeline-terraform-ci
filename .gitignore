@@ -1,0 +1,6 @@
+Annotations.md
+aws-key*
+.terraform*
+*.out
+*.tfvars
+*.tfstate*
