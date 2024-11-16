@@ -25,3 +25,12 @@ provider "aws" {
     }
   }
 }
+
+data "terraform_remote_state" "vpc" {
+  backend = "s3"
+  config = {
+    bucket = "dev-terraform-versioning"
+    key    = "aws-vm-github/terraform.tfstate"
+    region = "us-east-2"
+  }
+}
