@@ -11,7 +11,7 @@ resource "aws_instance" "vm" {
   ami                         = "ami-0ea3c35c5c3284d82" # dentro da AWS >> EC2 >> Instances >> Launch Instances >> Ubuntu >> AMI ID
   instance_type               = "t2.micro"
   key_name                    = aws_key_pair.key.key_name
-  subnet_id                   = aws_subnet.subnet.cidr_block
+  subnet_id                   = "subnet-09d21cbec360f4d5e"
   vpc_security_group_ids      = [aws_security_group.security_group.vpc_id]
   associate_public_ip_address = true
 
